@@ -9,5 +9,8 @@ jobs:
   build-and-publish-on-master:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Show greetings
         run: cat ./greetings/text.txt
