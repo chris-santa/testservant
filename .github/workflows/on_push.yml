@@ -1,0 +1,13 @@
+name: Echo greetings on push
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-publish-on-master:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show greetings
+        run: cat ./greetings/text.txt
