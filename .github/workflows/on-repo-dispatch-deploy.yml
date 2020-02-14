@@ -4,7 +4,7 @@ on:
   repository_dispatch:
     types: deploy
     paths-ignore:
-      - .github/workflows/**
+      - .github/common_workflows/**
 
 env:
   VERSION: ${{ github.event.client_payload.version }}

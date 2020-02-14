@@ -3,7 +3,7 @@ name: Show deploy buttons on pull request
 on:
   pull_request:
     paths-ignore:
-      - .github/workflows/**
+      - .github/common_workflows/**
 
 jobs:
   post-deploy-buttons:
