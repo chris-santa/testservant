@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths-ignore:
-      - .github/common_workflows/**
+      - .github/workflows/**
 
 jobs:
   build-and-publish-on-master:
@@ -19,8 +19,6 @@ jobs:
         uses: navikt/pb-common-gh-actions/build@v0.2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - run: echo Hello World
 
       - name: Bygg, tag og push Docker image
         uses: navikt/pb-common-gh-actions/docker-publish@v0.2
