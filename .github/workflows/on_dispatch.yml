@@ -30,7 +30,7 @@ jobs:
         run: |
           SHORT_SHA=$(echo $RELEASE_VERSION | cut -c16-23)
           git fetch --prune origin +refs/heads/*:refs/remotes/origin/*
-          git checkout $COMMIT_SHA
+          git checkout $SHORT_SHA
           echo "::set-env name=COMMIT_SHA::$(git log -1 --pretty='%H')"
 
       - name: Utleder komplett image-navn basert på release-version, tilgjengeliggjør dette for deploy-steget
